@@ -1,38 +1,40 @@
 # MMS_FEM
 Validating FEM for Elliptic Problems using Method of Manufactured Solutions
-Finite Element Computational Analysis (MATLAB Project)
-Project Overview
-This project focuses on solving a 2D heat conduction problem using the Finite Element Method (FEM) implemented in MATLAB. The work extends existing FEM code by incorporating higher-order elements, internal heat generation, and verifying accuracy through analytical solutions. The project is part of the coursework for the Finite Element Computational Analysis (EGM-23) module at Swansea University.
 
-Key Features
-Basic Code Extensions:
+# **Finite Element Computational Analysis (MATLAB Project)**  
 
-Implementation of internal heat generation distributed linearly across elements.
-Support for non-zero boundary normal heat flux (Neumann boundary conditions).
-Validation of the extended code using the Method of Manufactured Solutions (MMS).
-Mesh Generation and Accuracy Analysis:
+## **Project Overview**  
+This repository contains MATLAB code developed as part of the **Finite Element Computational Analysis (EGM-23)** coursework at Swansea University. The project focuses on solving a **2D steady-state heat conduction problem** using the **Finite Element Method (FEM)**, with extensions to incorporate higher-order elements, internal heat generation, and validation techniques.  
 
-Generated finite element meshes with varying element sizes and performed L2-Norm error analysis.
-Verified error propagation behavior with respect to element sizes and polynomial orders, achieving the expected gradient of ~2.
-Higher-Order Finite Element Formulation:
+## **Key Features**  
+- **Basic Extensions**:  
+  - Implementation of linearly varying internal heat sources within elements.  
+  - Handling of non-zero boundary normal heat flux for Neumann boundary conditions.  
+  - Validation of FEM results using the **Method of Manufactured Solutions (MMS)**.  
 
-Extended the FEM code to support higher-order polynomial basis functions for 4-node elements.
-Weak formulations for conductivity and heat source terms were derived and implemented using Gaussian Quadrature.
-Critical Observations:
+- **Mesh Generation and Accuracy Analysis**:  
+  - Generation of FEM meshes with varying element sizes.  
+  - L2-Norm error analysis to verify error propagation behavior.  
 
-Demonstrated temperature and heat flux distributions in line with prescribed boundary conditions.
-Showed reduced error convergence rates with finer meshes, validating code stability and accuracy.
-Key Techniques
-Weak formulation of FEM governing equations for both Dirichlet and Neumann boundary conditions.
-Use of isoparametric formulation for heat source integration over elements.
-Application of Gaussian Quadrature for higher-order basis functions.
-Method of Manufactured Solutions for code verification and validation.
-Results
-Successfully verified code accuracy with L2-Norm error convergence.
-Extended the solver to handle higher-order elements and linearly varying heat sources.
-Visualized temperature contours and heat flux distributions for various test cases, validating against analytical solutions.
-Technologies Used
-Programming Language: MATLAB
-Key Concepts: Finite Element Method (FEM), Weak Formulations, Gaussian Quadrature, Error Analysis
-Motivation
-This project was undertaken as part of my MSc in Computational Engineering at Swansea University. It highlights the integration of theoretical FEM concepts with practical coding implementations to solve real-world engineering problems.
+- **Higher-Order Finite Elements**:  
+  - Support for higher-order polynomial basis functions in 4-node elements.  
+  - Weak formulations for conductivity and heat source terms implemented with **Gaussian Quadrature**.  
+
+- **Critical Results**:  
+  - Verified temperature and flux distributions in line with prescribed boundary conditions.  
+  - Achieved expected error convergence rates, validating the solver's stability and accuracy.  
+
+## **Technical Details**  
+- **Weak Formulations**:  
+  - The FEM weak formulations for heat conduction include contributions from both Dirichlet (essential) and Neumann (natural) boundary conditions.  
+  - Gaussian Quadrature was employed for numerical integration in higher-order element formulations.  
+
+- **Error Analysis**:  
+  - L2-Norm error convergence was calculated based on manufactured solutions, confirming the relationship between mesh refinement and error decay.  
+
+## **How to Use**  
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/prajwal_1798/finite-element-analysis.git
+   
+
